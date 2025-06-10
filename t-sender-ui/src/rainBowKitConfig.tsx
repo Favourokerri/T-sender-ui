@@ -1,6 +1,6 @@
 "use client";
 import { getDefaultConfig } from '@rainbow-me/rainbowkit';
-import { anvil, zksync } from 'wagmi/chains';
+import { zksync,mainnet,arbitrum,optimism,base,sepolia} from 'wagmi/chains';
 
 const projectId = process.env.NEXT_PUBLIC_PROJECT_ID;
 if (!projectId) {
@@ -10,6 +10,6 @@ if (!projectId) {
 export default getDefaultConfig({
   appName: 'Tsender',
   projectId, // ✅ Type is now `string`
-  chains: [anvil, zksync],
+  chains: [zksync, mainnet, arbitrum, optimism, base,  sepolia],
   ssr: false,
 });
